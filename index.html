@@ -17,18 +17,40 @@
             p.style.color = '#BADA55';
             p.style.fontSize = '50px';
         }
-    // Regular
-    // Interpolated
-    // Styled
-    // warning!
-    // Error :|
-    // Info
-    // Testing
-    // clearing
-    // Viewing DOM Elements
-    // Grouping together
-    // counting
-    // timing
+        // Regular
+        console.log('hi');
+        // Interpolated
+        console.log('hello %s friend', 'my');
+        // Styled
+        console.log('%c this is text', 'font-size:30px');
+        // warning!
+        console.warn('what the heck');
+        // Error :|
+        console.error('heck no');
+        // Info
+        console.info('Did you know Harry Potter is the best series of all time?')
+
+        // clearing
+        //  console.clear()
+
+        // Viewing DOM Elements
+        console.log(makeGreen);
+        console.dir(makeGreen);
+        // Grouping together
+        // counting
+        console.count('heck');
+        console.count('heck');
+
+        // timing
+        console.time('fetching data');
+        fetch('https://api.github.com/users/KaraCav')
+            .then(data => data.json())
+            .then(data => {
+                console.timeEnd('fetching data');
+                console.log(data);
+                console.log(`hireable: ${data.hireable}`);
+
+            })
     </script>
 </body>
 
